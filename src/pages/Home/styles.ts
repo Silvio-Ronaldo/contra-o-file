@@ -283,3 +283,80 @@ export const PriceInfo = styled.div<PackedLunchProps>`
             }
         `};
 `;
+
+export const Contact = styled.section`
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: ${({ theme }) => theme.colors.primary50};
+
+    h3 {
+        font-weight: 500;
+        font-size: 2.5rem;
+        text-align: center;
+
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+    }
+`;
+
+export const Informations = styled.section`
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+`;
+
+export const Data = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    h4 {
+        font-weight: 500;
+        font-size: 2rem;
+        text-align: center;
+
+        color: ${({ theme }) => theme.colors.secondary900};
+    }
+
+    h6 {
+        font-weight: 500;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+`;
+
+export const Map = styled.div`
+    width: 540px;
+    height: 570px;
+
+    background-color: green;
+    border-radius: 40px;
+`;
+
+export const Footer = styled.footer`
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 4rem;
+`;
+
+export const Copyright = styled.div`
+    display: flex;
+    gap: 4rem;
+`;

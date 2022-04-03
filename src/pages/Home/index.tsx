@@ -18,6 +18,12 @@ import {
     PriceDetails,
     PriceImageContainer,
     PriceInfo,
+    Contact,
+    Informations,
+    Data,
+    Map,
+    Footer,
+    Copyright,
 } from './styles';
 
 export function Home() {
@@ -261,6 +267,46 @@ export function Home() {
                     <Button text="Quero a pequena" size="small" />
                 </PackedLunch>
             </Prices>
+
+            <Contact>
+                <h3>Como nos encontrar?</h3>
+
+                <Informations>
+                    <Data>
+                        <div>
+                            <h4>Atendemos apenas delivery no momento!</h4>
+                            <h6>
+                                Horário de funcionamento: 11:00H - 15:00H
+                                <br />
+                                Seg a Sáb.
+                            </h6>
+                            <h6>
+                                Localização: Rua Alfredo Lopes 1717
+                                <br /> CEP 13560460
+                            </h6>
+                            <h6>Telefone: (16) 98765-1234 - Whatsapp</h6>
+                        </div>
+
+                        <Button text="Ir para o nosso WhatsApp" size="large" />
+                    </Data>
+
+                    <Map />
+                </Informations>
+
+                <Footer>
+                    <StaticImage
+                        src="../../assets/images/brand.svg"
+                        alt="Brand"
+                        placeholder="blurred"
+                        style={{ zIndex: 1 }}
+                    />
+
+                    <Copyright>
+                        <span>Todos os direitos reservados ©</span>
+                        <span>2022</span>
+                    </Copyright>
+                </Footer>
+            </Contact>
         </Container>
     );
 }
