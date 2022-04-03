@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 `;
 
@@ -66,8 +68,114 @@ export const Main = styled.section`
     }
 `;
 
-export const About = styled.section``;
+export const About = styled.section`
+    width: 70%;
+    height: 100vh;
+    position: relative;
 
-export const AboutCards = styled.div``;
+    display: flex;
+    flex-direction: column;
 
-export const Card = styled.div``;
+    h3 {
+        font-weight: 500;
+        font-size: 2.5rem;
+        text-align: center;
+
+        margin-top: 3.5rem;
+    }
+
+    h5 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: center;
+
+        margin-top: 1rem;
+    }
+`;
+
+export const AboutCards = styled.div`
+    display: flex;
+    justify-content: center;
+
+    margin-top: 4rem;
+`;
+
+export const AboutCard = styled.div`
+    width: 270px;
+    margin: 0 2rem;
+
+    h6 {
+        font-weight: 500;
+        font-size: 1.25rem;
+        text-align: center;
+        line-height: 1.875rem;
+
+        margin-top: 2rem;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.25rem;
+        text-align: center;
+
+        margin-top: 1.5rem;
+    }
+`;
+
+export const Menu = styled.section`
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+        font-weight: 500;
+        font-size: 2.5rem;
+        text-align: center;
+
+        margin-top: 3.5rem;
+    }
+
+    h5 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: center;
+
+        margin-top: 1rem;
+    }
+`;
+
+export const MenuCard = styled.div`
+    width: 30rem;
+    height: 30rem;
+    margin-top: 2.25rem;
+    padding: 2rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 2.5rem;
+
+    background-color: ${({ theme }) => theme.colors.white};
+    // filter: blur(4px) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+
+    ul {
+        list-style: none;
+    }
+
+    ul li {
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: center;
+
+        margin: 1rem;
+    }
+`;

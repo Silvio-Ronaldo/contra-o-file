@@ -16,4 +16,8 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Poppins';
         font-size: 16px;
     }
+
+    h1, h2, h3, h4, h5, h6, p, span {
+        font-family: 'Poppins';
+    }
 `;
