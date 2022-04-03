@@ -13,6 +13,11 @@ import {
     AboutCard,
     Menu,
     MenuCard,
+    Prices,
+    PackedLunch,
+    PriceDetails,
+    PriceImageContainer,
+    PriceInfo,
 } from './styles';
 
 export function Home() {
@@ -81,7 +86,7 @@ export function Home() {
             <About>
                 <StaticImage
                     src="../../assets/images/peanuts.svg"
-                    alt="Peanuts"
+                    alt="Amendoins"
                     placeholder="blurred"
                     style={{
                         position: 'absolute',
@@ -172,6 +177,90 @@ export function Home() {
                     <Button text="Escolher marmitex" size="medium" />
                 </MenuCard>
             </Menu>
+
+            <Prices>
+                <StaticImage
+                    src="../../assets/images/tomato.svg"
+                    alt="Tomate"
+                    placeholder="blurred"
+                    style={{
+                        position: 'absolute',
+                        top: 0,
+                        right: 0,
+                        zIndex: 1,
+                    }}
+                    height={180}
+                    width={180}
+                />
+
+                <h3>Preços e Tamanhos</h3>
+
+                <PackedLunch>
+                    <PriceDetails>
+                        <PriceImageContainer>
+                            <StaticImage
+                                src="../../assets/images/packed-lunch-large.svg"
+                                alt="Marmitex grande"
+                                placeholder="blurred"
+                                height={310}
+                                width={320}
+                                style={{ borderRadius: 9999 }}
+                            />
+                        </PriceImageContainer>
+
+                        <PriceInfo>
+                            <h2>Grande</h2>
+                            <span>R$ 22,90</span>
+                            <p>R$ 18,90</p>
+                        </PriceInfo>
+                    </PriceDetails>
+                    <Button text="Quero a grande" size="large" />
+                </PackedLunch>
+
+                <PackedLunch size="medium">
+                    <PriceDetails>
+                        <PriceImageContainer>
+                            <StaticImage
+                                src="../../assets/images/packed-lunch-medium.svg"
+                                alt="Marmitex média"
+                                placeholder="blurred"
+                                height={250}
+                                width={260}
+                                style={{ borderRadius: 9999 }}
+                            />
+                        </PriceImageContainer>
+                        <PriceInfo size="medium">
+                            <h2>Média</h2>
+                            <span>R$ 18,90</span>
+                            <p>R$ 17,50</p>
+                        </PriceInfo>
+                    </PriceDetails>
+
+                    <Button text="Quero a média" size="medium" />
+                </PackedLunch>
+
+                <PackedLunch size="small">
+                    <PriceDetails>
+                        <PriceImageContainer>
+                            <StaticImage
+                                src="../../assets/images/packed-lunch-small.svg"
+                                alt="Marmitex pequena"
+                                placeholder="blurred"
+                                height={190}
+                                width={200}
+                                style={{ borderRadius: 9999 }}
+                            />
+                        </PriceImageContainer>
+                        <PriceInfo size="small">
+                            <h2>Pequena</h2>
+                            <span>R$ 15,90</span>
+                            <p>R$ 15,50</p>
+                        </PriceInfo>
+                    </PriceDetails>
+
+                    <Button text="Quero a pequena" size="small" />
+                </PackedLunch>
+            </Prices>
         </Container>
     );
 }

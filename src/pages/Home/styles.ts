@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+interface PackedLunchProps {
+    size?: string;
+}
 
 export const Container = styled.div`
     display: flex;
@@ -178,4 +182,104 @@ export const MenuCard = styled.div`
 
         margin: 1rem;
     }
+`;
+
+export const Prices = styled.section`
+    width: 70%;
+
+    position: relative;
+    justify-content: center;
+
+    h3 {
+        font-weight: 500;
+        font-size: 2.5rem;
+        text-align: center;
+
+        margin-top: 3.5rem;
+    }
+`;
+
+export const PackedLunch = styled.div<PackedLunchProps>`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1rem;
+`;
+
+export const PriceDetails = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
+
+export const PriceImageContainer = styled.div`
+    width: 320px;
+    height: 310px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const PriceInfo = styled.div<PackedLunchProps>`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    margin-left: 4rem;
+
+    h2 {
+        font-weight: 500;
+        font-size: 3rem;
+        text-align: center;
+
+        margin-top: 3.5rem;
+    }
+
+    span {
+        font-weight: 500;
+        font-size: 1.25rem;
+        text-align: center;
+        color: ${({ theme }) => theme.colors.gray};
+        text-decoration: line-through;
+
+        margin-top: 1rem;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 3.5rem;
+        text-align: center;
+        color: ${({ theme }) => theme.colors.secondary500};
+
+        margin-top: 1rem;
+    }
+
+    ${({ size }) =>
+        size === 'medium' &&
+        css`
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 2rem;
+                color: ${({ theme }) => theme.colors.black};
+            }
+        `};
+
+    ${({ size }) =>
+        size === 'small' &&
+        css`
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 2rem;
+                color: ${({ theme }) => theme.colors.black};
+            }
+        `};
 `;
