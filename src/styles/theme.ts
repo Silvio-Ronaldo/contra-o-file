@@ -4,6 +4,8 @@ export default {
         black: '#000000',
         gray: '#C4C4C4',
 
+        primary: '#FFDFBF',
+        primary2: '#ffcdb0',
         primary50: '#FFE19A',
         primary100: '#FFCA85',
         primary200: '#FFB470',
