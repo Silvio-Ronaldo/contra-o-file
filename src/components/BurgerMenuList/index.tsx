@@ -2,6 +2,11 @@ import React from 'react';
 
 import { Container, LinkList, StyledLink } from './styles';
 
+/*
+    BurgerMenuList é a lista de navegação que é aberta
+    ao clicar no menu hamburguer quando ele está presente.
+*/
+
 interface BurgerMenuListProps {
     visible: boolean;
 }

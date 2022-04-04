@@ -2,6 +2,10 @@ import React from 'react';
 
 import { Container } from './styles';
 
+/*
+    Componente botão, usado em toda a aplicação.
+*/
+
 interface ButtonProps {
     text: string;
     size: 'small' | 'medium' | 'large';

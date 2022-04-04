@@ -1,3 +1,5 @@
+// Tema padrão com a paleta de cores
+
 export default {
     colors: {
         white: '#FFFFFF',

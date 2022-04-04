@@ -3,6 +3,11 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 import { Container, AboutCards, AboutCard } from './styles';
 
+/*
+    About é uma seção dedicada
+    para mostrar os valores do Contra o Filé
+*/
+
 export function About() {
     return (
         <Container id="about">

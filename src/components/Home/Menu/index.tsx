@@ -7,6 +7,15 @@ import { Button } from '../../Button';
 
 import { Container, MenuImageContainer, MenuCard } from './styles';
 
+/*
+    Aqui é a section do cardápio do restaurante.
+    O cardápio é representado por um carrossel (slider),
+    que vai alternando o cardápio de cada dia da semana.
+
+    Ao clicar no cardápio, é redirecionado
+    para escolha de tamanho de marmitex.
+*/
+
 export function Menu() {
     const date = new Date();
 
@@ -57,7 +66,9 @@ export function Menu() {
                             <li>Patê de castanhas</li>
                         </ul>
 
-                        <Button text="Escolher marmitex" size="medium" />
+                        <a href="/#prices">
+                            <Button text="Escolher marmitex" size="medium" />
+                        </a>
                     </MenuCard>
                 </div>
                 <div
@@ -77,7 +88,9 @@ export function Menu() {
                             <li>Patê de castanhas</li>
                         </ul>
 
-                        <Button text="Escolher marmitex" size="medium" />
+                        <a href="/#prices">
+                            <Button text="Escolher marmitex" size="medium" />
+                        </a>
                     </MenuCard>
                 </div>
                 <div
@@ -97,7 +110,9 @@ export function Menu() {
                             <li>Patê de castanhas</li>
                         </ul>
 
-                        <Button text="Escolher marmitex" size="medium" />
+                        <a href="/#prices">
+                            <Button text="Escolher marmitex" size="medium" />
+                        </a>
                     </MenuCard>
                 </div>
                 <div
@@ -117,7 +132,9 @@ export function Menu() {
                             <li>Patê de castanhas</li>
                         </ul>
 
-                        <Button text="Escolher marmitex" size="medium" />
+                        <a href="/#prices">
+                            <Button text="Escolher marmitex" size="medium" />
+                        </a>
                     </MenuCard>
                 </div>
                 <div
@@ -137,7 +154,9 @@ export function Menu() {
                             <li>Patê de castanhas</li>
                         </ul>
 
-                        <Button text="Escolher marmitex" size="medium" />
+                        <a href="/#prices">
+                            <Button text="Escolher marmitex" size="medium" />
+                        </a>
                     </MenuCard>
                 </div>
                 <div
@@ -157,7 +176,9 @@ export function Menu() {
                             <li>Patê de castanhas</li>
                         </ul>
 
-                        <Button text="Escolher marmitex" size="medium" />
+                        <a href="/#prices">
+                            <Button text="Escolher marmitex" size="medium" />
+                        </a>
                     </MenuCard>
                 </div>
                 <div
@@ -177,7 +198,9 @@ export function Menu() {
                             <li>Patê de castanhas</li>
                         </ul>
 
-                        <Button text="Escolher marmitex" size="medium" />
+                        <a href="/#prices">
+                            <Button text="Escolher marmitex" size="medium" />
+                        </a>
                     </MenuCard>
                 </div>
             </Carousel>

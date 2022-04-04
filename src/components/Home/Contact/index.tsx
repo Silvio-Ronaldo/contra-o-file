@@ -15,6 +15,12 @@ import {
     Copyright,
 } from './styles';
 
+/*
+    Aqui estão as informações de contato e um mapa.
+    Ao clicar no mapa, você é redirecionado ao endereço no Maps.
+    Ao clicar no botão, é redirecionado ao Whats, para entrar em contato.
+*/
+
 export function Contact() {
     return (
         <Container id="contact">

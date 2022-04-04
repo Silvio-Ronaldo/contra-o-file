@@ -15,6 +15,13 @@ import {
     Main,
 } from './styles';
 
+/*
+    Hero é a section principal do site,
+    a capa que aparece assim que ele é aberto.
+    Engloba o menu de navegação e o banner de destaque.
+    Ao clicar no botão principal, é redirecionado a seção de preços.
+*/
+
 export function Hero() {
     const [openBurgerMenu, setOpenBurgerMenu] = useState(false);
 
@@ -24,6 +31,7 @@ export function Hero() {
 
     return (
         <Container>
+            {/* Imagem de background da hero section */}
             <HeroImageContainer>
                 <StaticImage
                     src="../../../assets/images/home-background.svg"
@@ -70,9 +78,15 @@ export function Hero() {
                 </HeaderWrapper>
 
                 <ButtonHeaderWrapper>
-                    <Button text="Peça já a sua" size="small" />
+                    <a href="/#prices">
+                        <Button text="Peça já a sua" size="small" />
+                    </a>
                 </ButtonHeaderWrapper>
 
+                {/*
+                    O menu hamburguer só aparece em telas menores
+                    quando o menu em lista desaparece
+                */}
                 <BurgerMenu onClick={handleBurgerMenu}>
                     <FiMenu size={24} color="#5C9600" />
                     <BurgerMenuList visible={openBurgerMenu} />
@@ -89,7 +103,9 @@ export function Hero() {
                 </h2>
                 <span>E de brinde, proteja os animais!</span>
 
-                <Button text="Estou com fome" size="large" />
+                <a href="/#prices">
+                    <Button text="Estou com fome" size="large" />
+                </a>
             </Main>
         </Container>
     );

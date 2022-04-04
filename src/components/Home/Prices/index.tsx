@@ -11,6 +11,12 @@ import {
     PriceInfo,
 } from './styles';
 
+/*
+    Prices é a section que mostra os tamanhos e preços de marmitex.
+    Ao escolher um tipo de marmitex, a ideia é redirecionar direto ao whats,
+    com a marmitex escolhida na mensagem.
+*/
+
 export function Prices() {
     return (
         <Container id="prices">

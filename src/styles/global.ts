@@ -1,3 +1,5 @@
+/* Criando estilos globais da aplicação */
+
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
@@ -44,5 +46,10 @@ export const GlobalStyle = createGlobalStyle`
         @media (max-width: 1300px) {
             font-size: 12px;
         }
+    }
+
+    a {
+        text-decoration: none;
+        color: ${({ theme }) => theme.colors.white};
     }
 `;
