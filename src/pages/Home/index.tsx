@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
@@ -36,9 +36,16 @@ import {
     Copyright,
     ButtonHeaderWrapper,
 } from './styles';
+import { BurgerMenuList } from '../../components/BurgerMenuList';
 
 export function Home() {
+    const [openBurgerMenu, setOpenBurgerMenu] = useState(false);
+
     const date = new Date();
+
+    function handleBurgerMenu() {
+        setOpenBurgerMenu(!openBurgerMenu);
+    }
 
     return (
         <Container>
@@ -71,26 +78,20 @@ export function Home() {
                             />
                         </div>
                         <nav>
-                            <Button
-                                text="Sobre"
-                                size="small"
-                                variant="secondary"
-                            />
-                            <Button
-                                text="Cardápio"
-                                size="small"
-                                variant="secondary"
-                            />
-                            <Button
-                                text="Preços"
-                                size="small"
-                                variant="secondary"
-                            />
-                            <Button
-                                text="Contato"
-                                size="small"
-                                variant="secondary"
-                            />
+                            <ul>
+                                <li>
+                                    <a href="/#about">Sobre</a>
+                                </li>
+                                <li>
+                                    <a href="/#menu">Cardápio</a>
+                                </li>
+                                <li>
+                                    <a href="/#prices">Preços</a>
+                                </li>
+                                <li>
+                                    <a href="/#contact">Contato</a>
+                                </li>
+                            </ul>
                         </nav>
                     </HeaderWrapper>
 
@@ -98,8 +99,9 @@ export function Home() {
                         <Button text="Peça já a sua" size="small" />
                     </ButtonHeaderWrapper>
 
-                    <BurgerMenu>
+                    <BurgerMenu onClick={handleBurgerMenu}>
                         <FiMenu size={24} color="#5C9600" />
+                        <BurgerMenuList visible={openBurgerMenu} />
                     </BurgerMenu>
                 </Header>
 
@@ -117,7 +119,7 @@ export function Home() {
                 </Main>
             </Hero>
 
-            <About>
+            <About id="about">
                 <StaticImage
                     src="../../assets/images/peanuts.svg"
                     alt="Amendoins"
@@ -175,7 +177,7 @@ export function Home() {
                 </AboutCards>
             </About>
 
-            <Menu>
+            <Menu id="menu">
                 <MenuImageContainer>
                     <StaticImage
                         src="../../assets/images/menu-background.svg"
@@ -346,15 +348,7 @@ export function Home() {
                 </Carousel>
             </Menu>
 
-            <Prices>
-                {/* <StaticImage
-                    src="../../assets/images/peanuts.svg"
-                    alt="Brócolis"
-                    placeholder="blurred"
-                    height={180}
-                    width={180}
-                    /> */}
-
+            <Prices id="prices">
                 <h3>Preços e Tamanhos</h3>
 
                 <PackedLunch>
@@ -424,7 +418,7 @@ export function Home() {
                 </PackedLunch>
             </Prices>
 
-            <Contact>
+            <Contact id="contact">
                 <h3>Como nos encontrar?</h3>
 
                 <Informations>

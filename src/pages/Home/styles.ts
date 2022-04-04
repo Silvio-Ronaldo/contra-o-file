@@ -58,6 +58,29 @@ export const Header = styled.header`
         gap: 2.5rem;
         margin-right: 1.5rem;
 
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        ul li {
+            margin: 1rem;
+            padding: 8px;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12),
+                    0 7px 10px -5px rgba(0, 0, 0, 0.15);
+                transition: all 150ms ease 0s;
+            }
+        }
+
+        ul li a {
+            color: ${({ theme }) => theme.colors.black};
+            text-decoration: none;
+            flex: 1;
+        }
+
         @media (max-width: 1300px) {
             gap: 1.5rem;
         }
