@@ -16,13 +16,18 @@ export const Hero = styled.main`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    padding: 0 24px 50px;
+    margin-bottom: 50px;
 
-    /*background-image: linear-gradient(
-        to right,
-        ${({ theme }) => theme.colors.primary},
-        ${({ theme }) => theme.colors.primary2}
-    );*/
+    @media (max-width: 860px) {
+        background-color: ${({ theme }) => theme.colors.primary};
+    }
+`;
+
+export const HeroImageContainer = styled.div`
+    @media (max-width: 860px) {
+        display: none;
+    }
 `;
 
 export const Header = styled.header`
@@ -38,11 +43,72 @@ export const Header = styled.header`
 
     background-color: transparent;
 
+    @media (max-width: 1300px) {
+        width: 80%;
+    }
+
+    @media (max-width: 1120px) {
+        width: 90%;
+    }
+
     nav {
         display: flex;
         align-items: center;
 
         gap: 2.5rem;
+        margin-right: 1.5rem;
+
+        @media (max-width: 1300px) {
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 790px) {
+            gap: 1rem;
+        }
+
+        @media (max-width: 690px) {
+            display: none;
+        }
+    }
+`;
+
+export const HeaderWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 1300px) {
+        div {
+            width: 200px;
+        }
+    }
+
+    @media (max-width: 790px) {
+        div {
+            width: 130px;
+        }
+    }
+`;
+
+export const BurgerMenu = styled.button`
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    will-change: box-shadow, transform;
+    touch-action: manipulation;
+
+    &:hover {
+        box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12),
+            0 7px 10px -5px rgba(0, 0, 0, 0.15);
+        transition: all 150ms ease 0s;
+        cursor: pointer;
+    }
+
+    @media (max-width: 690px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 `;
 
@@ -70,15 +136,44 @@ export const Main = styled.section`
         font-weight: 500;
         margin: 1rem 0 2rem 0;
     }
+
+    @media (max-width: 1120px) {
+        h1 {
+            margin: 0.5rem 0;
+        }
+
+        h5 {
+            margin: 0.5rem 0;
+        }
+
+        span {
+            margin-top: 0.5rem;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h5 {
+            font-size: 1rem;
+        }
+
+        span {
+            font-size: 0.75rem;
+        }
+    }
 `;
 
 export const About = styled.section`
     width: 70%;
-    height: 100vh;
     position: relative;
+    margin: 50px;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     h3 {
         font-weight: 500;
@@ -97,11 +192,16 @@ export const About = styled.section`
     }
 `;
 
-export const AboutCards = styled.div`
+export const AboutCards = styled.section`
     display: flex;
     justify-content: center;
 
-    margin-top: 4rem;
+    margin-top: 64px;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        gap: 48px;
+    }
 `;
 
 export const AboutCard = styled.div`
@@ -130,7 +230,6 @@ export const AboutCard = styled.div`
 
 export const Menu = styled.section`
     width: 100%;
-    height: 100vh;
     position: relative;
 
     display: flex;
@@ -139,12 +238,18 @@ export const Menu = styled.section`
     justify-content: center;
     overflow: hidden;
 
+    margin: 50px;
+
+    @media (max-width: 1070px) {
+        background-color: ${({ theme }) => theme.colors.primary};
+    }
+
     h3 {
         font-weight: 500;
         font-size: 2.5rem;
         text-align: center;
 
-        margin-top: 3.5rem;
+        margin-top: 50px;
     }
 
     h5 {
@@ -152,14 +257,20 @@ export const Menu = styled.section`
         font-size: 1.5rem;
         text-align: center;
 
-        margin-top: 1rem;
+        margin-top: 16px;
+    }
+`;
+
+export const MenuImageContainer = styled.div`
+    @media (max-width: 1070px) {
+        display: none;
     }
 `;
 
 export const MenuCard = styled.div`
     width: 30rem;
-    height: 30rem;
-    margin: 2.25rem 0 0;
+    height: 350px;
+    margin: 32px 0;
     padding: 2rem 1rem;
 
     display: flex;
@@ -167,10 +278,17 @@ export const MenuCard = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    border-radius: 2.5rem;
+    border-radius: 40px;
 
     background-color: ${({ theme }) => theme.colors.white};
-    // filter: blur(4px) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+
+    @media (max-width: 1170px) {
+        height: 300px;
+    }
+
+    @media (max-width: 480px) {
+        width: 25rem;
+    }
 
     ul {
         list-style: none;
@@ -178,10 +296,10 @@ export const MenuCard = styled.div`
 
     ul li {
         font-weight: 500;
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-align: center;
 
-        margin: 1rem;
+        margin: 16px;
     }
 `;
 
@@ -189,14 +307,25 @@ export const Prices = styled.section`
     width: 70%;
 
     position: relative;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin: 50px;
+
+    @media (max-width: 970px) {
+        width: 80%;
+    }
+
+    @media (max-width: 860px) {
+        width: 90%;
+    }
 
     h3 {
         font-weight: 500;
         font-size: 2.5rem;
         text-align: center;
 
-        margin-top: 3.5rem;
+        margin-top: 50px;
     }
 `;
 
@@ -206,12 +335,22 @@ export const PackedLunch = styled.div<PackedLunchProps>`
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 1rem;
+    margin: 24px;
+
+    @media (max-width: 770px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const PriceDetails = styled.div`
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 770px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const PriceImageContainer = styled.div`
@@ -221,6 +360,11 @@ export const PriceImageContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 1190px) {
+        width: 230px;
+        height: 220px;
+    }
 `;
 
 export const PriceInfo = styled.div<PackedLunchProps>`
@@ -229,14 +373,23 @@ export const PriceInfo = styled.div<PackedLunchProps>`
     justify-content: center;
     align-items: baseline;
 
-    margin-left: 4rem;
+    margin-left: 32px;
+
+    @media (max-width: 770px) {
+        margin-left: 0;
+        margin-bottom: 16px;
+    }
 
     h2 {
         font-weight: 500;
         font-size: 3rem;
         text-align: center;
 
-        margin-top: 3.5rem;
+        margin-top: 50px;
+
+        @media (max-width: 1100px) {
+            font-size: 2rem;
+        }
     }
 
     span {
@@ -246,7 +399,7 @@ export const PriceInfo = styled.div<PackedLunchProps>`
         color: ${({ theme }) => theme.colors.gray};
         text-decoration: line-through;
 
-        margin-top: 1rem;
+        margin-top: 16px;
     }
 
     p {
@@ -255,7 +408,11 @@ export const PriceInfo = styled.div<PackedLunchProps>`
         text-align: center;
         color: ${({ theme }) => theme.colors.secondary500};
 
-        margin-top: 1rem;
+        margin-top: 16px;
+
+        @media (max-width: 1100px) {
+            font-size: 2rem;
+        }
     }
 
     ${({ size }) =>
@@ -292,6 +449,7 @@ export const Contact = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     background-color: ${({ theme }) => theme.colors.primary50};
 
@@ -300,8 +458,8 @@ export const Contact = styled.section`
         font-size: 2.5rem;
         text-align: center;
 
-        margin-top: 3.5rem;
-        margin-bottom: 3.5rem;
+        margin-top: 56px;
+        margin-bottom: 56px;
     }
 `;
 
@@ -309,20 +467,28 @@ export const Informations = styled.section`
     width: 70%;
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 24px;
+
+    @media (max-width: 1250px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const Data = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 800px) {
+        width: 90%;
+    }
 
     div {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 24px;
     }
 
     h4 {
@@ -337,15 +503,23 @@ export const Data = styled.div`
         font-weight: 500;
         font-size: 1.25rem;
         text-align: center;
+        margin-bottom: 16px;
     }
 `;
 
 export const Map = styled.div`
-    width: 540px;
-    height: 480px;
-
     border-radius: 40px;
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+`;
+
+export const MapImageContainer = styled.div`
+    @media (max-width: 1250px) {
+        width: 300px;
+        height: 300px;
+    }
 `;
 
 export const Footer = styled.footer`
@@ -354,10 +528,34 @@ export const Footer = styled.footer`
     align-items: center;
     justify-content: space-between;
 
-    margin-top: 4rem;
+    margin: 24px 0;
+
+    @media (max-width: 640px) {
+        flex-direction: column-reverse;
+    }
+`;
+
+export const FooterImageContainer = styled.div`
+    @media (max-width: 1300px) {
+        width: 200px;
+    }
+
+    @media (max-width: 790px) {
+        width: 130px;
+    }
 `;
 
 export const Copyright = styled.div`
     display: flex;
-    gap: 4rem;
+    gap: 64px;
+
+    @media (max-width: 640px) {
+        margin-bottom: 24px;
+    }
+`;
+
+export const ButtonHeaderWrapper = styled.div`
+    @media (max-width: 690px) {
+        display: none;
+    }
 `;

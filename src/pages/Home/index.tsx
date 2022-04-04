@@ -3,18 +3,23 @@ import { StaticImage } from 'gatsby-plugin-image';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'gatsby';
+import { FiMenu } from 'react-icons/fi';
 
 import { Button } from '../../components/Button';
 
 import {
     Container,
     Hero,
+    HeroImageContainer,
     Header,
+    HeaderWrapper,
+    BurgerMenu,
     Main,
     About,
     AboutCards,
     AboutCard,
     Menu,
+    MenuImageContainer,
     MenuCard,
     Prices,
     PackedLunch,
@@ -25,8 +30,11 @@ import {
     Informations,
     Data,
     Map,
+    MapImageContainer,
     Footer,
+    FooterImageContainer,
     Copyright,
+    ButtonHeaderWrapper,
 } from './styles';
 
 export function Home() {
@@ -35,49 +43,64 @@ export function Home() {
     return (
         <Container>
             <Hero>
-                <StaticImage
-                    src="../../assets/images/home-background.svg"
-                    alt="logo"
-                    placeholder="blurred"
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        zIndex: -1,
-                    }}
-                    height={860}
-                    width={1800}
-                />
+                <HeroImageContainer>
+                    <StaticImage
+                        src="../../assets/images/home-background.svg"
+                        alt="logo"
+                        placeholder="blurred"
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            zIndex: -1,
+                        }}
+                        height={860}
+                        width={1800}
+                    />
+                </HeroImageContainer>
 
                 <Header>
-                    <nav>
-                        <StaticImage
-                            src="../../assets/images/logo.svg"
-                            alt="logo"
-                            placeholder="blurred"
-                            objectFit="fill"
-                            width={270}
-                        />
+                    <HeaderWrapper>
+                        <div>
+                            <StaticImage
+                                src="../../assets/images/logo.svg"
+                                alt="logo"
+                                placeholder="blurred"
+                                objectFit="fill"
+                                width={270}
+                            />
+                        </div>
+                        <nav>
+                            <Button
+                                text="Sobre"
+                                size="small"
+                                variant="secondary"
+                            />
+                            <Button
+                                text="Cardápio"
+                                size="small"
+                                variant="secondary"
+                            />
+                            <Button
+                                text="Preços"
+                                size="small"
+                                variant="secondary"
+                            />
+                            <Button
+                                text="Contato"
+                                size="small"
+                                variant="secondary"
+                            />
+                        </nav>
+                    </HeaderWrapper>
 
-                        <Button text="Sobre" size="small" variant="secondary" />
-                        <Button
-                            text="Cardápio"
-                            size="small"
-                            variant="secondary"
-                        />
-                        <Button
-                            text="Preços"
-                            size="small"
-                            variant="secondary"
-                        />
-                        <Button
-                            text="Contato"
-                            size="small"
-                            variant="secondary"
-                        />
-                    </nav>
+                    <ButtonHeaderWrapper>
+                        <Button text="Peça já a sua" size="small" />
+                    </ButtonHeaderWrapper>
 
-                    <Button text="Peça já a sua" size="small" />
+                    <BurgerMenu>
+                        <FiMenu size={24} color="#5C9600" />
+                    </BurgerMenu>
                 </Header>
 
                 <Main>
@@ -99,12 +122,6 @@ export function Home() {
                     src="../../assets/images/peanuts.svg"
                     alt="Amendoins"
                     placeholder="blurred"
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        zIndex: 1,
-                    }}
                     height={180}
                     width={180}
                 />
@@ -159,19 +176,21 @@ export function Home() {
             </About>
 
             <Menu>
-                <StaticImage
-                    src="../../assets/images/menu-background.svg"
-                    alt="Fruits"
-                    placeholder="blurred"
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        zIndex: -1,
-                    }}
-                    height={860}
-                    width={1800}
-                />
+                <MenuImageContainer>
+                    <StaticImage
+                        src="../../assets/images/menu-background.svg"
+                        alt="Fruits"
+                        placeholder="blurred"
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            zIndex: -1,
+                        }}
+                        height={860}
+                        width={1800}
+                    />
+                </MenuImageContainer>
 
                 <h3>Cardápio</h3>
 
@@ -328,19 +347,13 @@ export function Home() {
             </Menu>
 
             <Prices>
-                <StaticImage
-                    src="../../assets/images/tomato.svg"
-                    alt="Tomate"
+                {/* <StaticImage
+                    src="../../assets/images/peanuts.svg"
+                    alt="Brócolis"
                     placeholder="blurred"
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        right: 0,
-                        zIndex: 1,
-                    }}
                     height={180}
                     width={180}
-                />
+                    /> */}
 
                 <h3>Preços e Tamanhos</h3>
 
@@ -435,23 +448,28 @@ export function Home() {
 
                     <Map>
                         <Link to="https://www.google.com.br/maps/place/R.+Alfredo+Lopes,+1717+-+Jardim+Macarengo,+São+Carlos+-+SP,+13560-460/@-22.0074579,-47.8838125,17z/data=!3m1!4b1!4m5!3m4!1s0x94b876d5e2c68a51:0xf8989bb472e252c5!8m2!3d-22.0074629!4d-47.8816238">
-                            <StaticImage
-                                src="../../assets/images/map.svg"
-                                alt="Mapa"
-                                placeholder="blurred"
-                                style={{ borderRadius: 40 }}
-                            />
+                            <MapImageContainer>
+                                <StaticImage
+                                    src="../../assets/images/map.svg"
+                                    alt="Mapa"
+                                    placeholder="blurred"
+                                    style={{ borderRadius: 40 }}
+                                    width={600}
+                                />
+                            </MapImageContainer>
                         </Link>
                     </Map>
                 </Informations>
 
                 <Footer>
-                    <StaticImage
-                        src="../../assets/images/brand.svg"
-                        alt="Brand"
-                        placeholder="blurred"
-                        style={{ zIndex: 1 }}
-                    />
+                    <FooterImageContainer>
+                        <StaticImage
+                            src="../../assets/images/brand.svg"
+                            alt="Brand"
+                            placeholder="blurred"
+                            style={{ zIndex: 1 }}
+                        />
+                    </FooterImageContainer>
 
                     <Copyright>
                         <span>Todos os direitos reservados ©</span>

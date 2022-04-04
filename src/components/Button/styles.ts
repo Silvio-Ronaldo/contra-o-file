@@ -11,10 +11,11 @@ export const Container = styled.button<ContainerProps>`
     align-items: center;
 
     height: 45px;
+    min-width: 64px;
     max-width: 450px;
     border-radius: 16px;
 
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
 
     padding: 12px 16px;
@@ -24,7 +25,13 @@ export const Container = styled.button<ContainerProps>`
         css`
             height: 82px;
             border-radius: 24px;
-            font-size: 20px;
+            font-size: 1.25rem;
+
+            @media (max-width: 1000px) {
+                height: 45px;
+                border-radius: 16px;
+                font-size: 0.875rem;
+            }
         `}
 
     ${props =>
@@ -32,8 +39,14 @@ export const Container = styled.button<ContainerProps>`
         css`
             height: 120px;
             border-radius: 40px;
-            font-size: 20px;
+            font-size: 1.25rem;
             padding: 12px 64px;
+
+            @media (max-width: 1120px) {
+                height: 82px;
+                border-radius: 24px;
+                font-size: 1.25rem;
+            }
         `}
 
     background-color: ${({ theme }) => theme.colors.secondary500};
