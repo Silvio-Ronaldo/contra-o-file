@@ -5,7 +5,7 @@
 
 <p align="center">
   <strong>
-   🥬 O restaurante Contra o Filé é um restaurante vegano com a proposta de ser saudável e com custo acessível. 🍉 </br>
+   🥬 O restaurante Contra o Filé é um restaurante vegano com a proposta de ser saudável e com custo acessível🍉 </br>
   </strong>
 </p>
 
