@@ -137,6 +137,7 @@ export const Menu = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     h3 {
         font-weight: 500;
@@ -158,7 +159,7 @@ export const Menu = styled.section`
 export const MenuCard = styled.div`
     width: 30rem;
     height: 30rem;
-    margin-top: 2.25rem;
+    margin: 2.25rem 0 0;
     padding: 2rem 1rem;
 
     display: flex;

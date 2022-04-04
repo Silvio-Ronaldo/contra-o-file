@@ -1,5 +1,7 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 import { Button } from '../../components/Button';
 
@@ -27,6 +29,8 @@ import {
 } from './styles';
 
 export function Home() {
+    const date = new Date();
+
     return (
         <Container>
             <Hero>
@@ -169,19 +173,157 @@ export function Home() {
                 />
 
                 <h3>Cardápio</h3>
-                <h5>Segunda-feira</h5>
 
-                <MenuCard>
-                    <ul>
-                        <li>Arroz com Brocólis e Amêndoas</li>
-                        <li>Guacamole</li>
-                        <li>Salada de lentilha</li>
-                        <li>Quibe de abóbora</li>
-                        <li>Patê de castanhas</li>
-                    </ul>
+                <Carousel
+                    centerMode
+                    centerSlidePercentage={20}
+                    infiniteLoop
+                    autoPlay
+                    selectedItem={date.getDay()}
+                    showArrows={false}
+                    showStatus={false}
+                >
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <h5>Domingo</h5>
+                        <MenuCard>
+                            <ul>
+                                <li>Arroz com Brocólis e Amêndoas</li>
+                                <li>Guacamole</li>
+                                <li>Salada de lentilha</li>
+                                <li>Quibe de abóbora</li>
+                                <li>Patê de castanhas</li>
+                            </ul>
 
-                    <Button text="Escolher marmitex" size="medium" />
-                </MenuCard>
+                            <Button text="Escolher marmitex" size="medium" />
+                        </MenuCard>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <h5>Segunda-Feira</h5>
+                        <MenuCard>
+                            <ul>
+                                <li>Feijão com Brocólis e Amêndoas</li>
+                                <li>Guacamole</li>
+                                <li>Salada de lentilha</li>
+                                <li>Quibe de abóbora</li>
+                                <li>Patê de castanhas</li>
+                            </ul>
+
+                            <Button text="Escolher marmitex" size="medium" />
+                        </MenuCard>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <h5>Terça-Feira</h5>
+                        <MenuCard>
+                            <ul>
+                                <li>Granola com Brocólis e Amêndoas</li>
+                                <li>Guacamole</li>
+                                <li>Salada de lentilha</li>
+                                <li>Quibe de abóbora</li>
+                                <li>Patê de castanhas</li>
+                            </ul>
+
+                            <Button text="Escolher marmitex" size="medium" />
+                        </MenuCard>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <h5>Quarta-Feira</h5>
+                        <MenuCard>
+                            <ul>
+                                <li>Granola com Brocólis e Amêndoas</li>
+                                <li>Guacamole</li>
+                                <li>Salada de lentilha</li>
+                                <li>Quibe de abóbora</li>
+                                <li>Patê de castanhas</li>
+                            </ul>
+
+                            <Button text="Escolher marmitex" size="medium" />
+                        </MenuCard>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <h5>Quinta-Feira</h5>
+                        <MenuCard>
+                            <ul>
+                                <li>Granola com Brocólis e Amêndoas</li>
+                                <li>Guacamole</li>
+                                <li>Salada de lentilha</li>
+                                <li>Quibe de abóbora</li>
+                                <li>Patê de castanhas</li>
+                            </ul>
+
+                            <Button text="Escolher marmitex" size="medium" />
+                        </MenuCard>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <h5>Sexta-Feira</h5>
+                        <MenuCard>
+                            <ul>
+                                <li>Granola com Brocólis e Amêndoas</li>
+                                <li>Guacamole</li>
+                                <li>Salada de lentilha</li>
+                                <li>Quibe de abóbora</li>
+                                <li>Patê de castanhas</li>
+                            </ul>
+
+                            <Button text="Escolher marmitex" size="medium" />
+                        </MenuCard>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <h5>Sábado</h5>
+                        <MenuCard>
+                            <ul>
+                                <li>Granola com Brocólis e Amêndoas</li>
+                                <li>Guacamole</li>
+                                <li>Salada de lentilha</li>
+                                <li>Quibe de abóbora</li>
+                                <li>Patê de castanhas</li>
+                            </ul>
+
+                            <Button text="Escolher marmitex" size="medium" />
+                        </MenuCard>
+                    </div>
+                </Carousel>
             </Menu>
 
             <Prices>
