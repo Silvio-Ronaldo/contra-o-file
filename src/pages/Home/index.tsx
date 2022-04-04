@@ -2,6 +2,7 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import { Link } from 'gatsby';
 
 import { Button } from '../../components/Button';
 
@@ -432,7 +433,16 @@ export function Home() {
                         <Button text="Ir para o nosso WhatsApp" size="large" />
                     </Data>
 
-                    <Map />
+                    <Map>
+                        <Link to="https://www.google.com.br/maps/place/R.+Alfredo+Lopes,+1717+-+Jardim+Macarengo,+São+Carlos+-+SP,+13560-460/@-22.0074579,-47.8838125,17z/data=!3m1!4b1!4m5!3m4!1s0x94b876d5e2c68a51:0xf8989bb472e252c5!8m2!3d-22.0074629!4d-47.8816238">
+                            <StaticImage
+                                src="../../assets/images/map.svg"
+                                alt="Mapa"
+                                placeholder="blurred"
+                                style={{ borderRadius: 40 }}
+                            />
+                        </Link>
+                    </Map>
                 </Informations>
 
                 <Footer>
