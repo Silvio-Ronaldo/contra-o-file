@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../styles/global';
 import theme from '../styles/theme';
 
-import { Home } from './Home';
+import { Home } from '../components/Home';
 
 function Index() {
     return (
