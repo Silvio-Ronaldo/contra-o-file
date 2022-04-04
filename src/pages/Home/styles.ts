@@ -148,7 +148,7 @@ export const Main = styled.section`
         margin: 1rem 0;
     }
 
-    h5 {
+    h2 {
         font-size: 1.5rem;
         font-weight: 500;
         margin: 1rem 0;
@@ -206,7 +206,7 @@ export const About = styled.section`
         margin-top: 3.5rem;
     }
 
-    h5 {
+    h4 {
         font-weight: 500;
         font-size: 1.5rem;
         text-align: center;
@@ -231,7 +231,7 @@ export const AboutCard = styled.div`
     width: 270px;
     margin: 0 2rem;
 
-    h6 {
+    h5 {
         font-weight: 500;
         font-size: 1.25rem;
         text-align: center;
@@ -275,7 +275,7 @@ export const Menu = styled.section`
         margin-top: 50px;
     }
 
-    h5 {
+    h4 {
         font-weight: 500;
         font-size: 1.5rem;
         text-align: center;
@@ -403,7 +403,7 @@ export const PriceInfo = styled.div<PackedLunchProps>`
         margin-bottom: 16px;
     }
 
-    h2 {
+    h4 {
         font-weight: 500;
         font-size: 3rem;
         text-align: center;
@@ -419,7 +419,7 @@ export const PriceInfo = styled.div<PackedLunchProps>`
         font-weight: 500;
         font-size: 1.25rem;
         text-align: center;
-        color: ${({ theme }) => theme.colors.gray};
+        color: ${({ theme }) => theme.colors.black};
         text-decoration: line-through;
 
         margin-top: 16px;
@@ -441,7 +441,7 @@ export const PriceInfo = styled.div<PackedLunchProps>`
     ${({ size }) =>
         size === 'medium' &&
         css`
-            h2 {
+            h4 {
                 font-size: 2rem;
             }
 
@@ -454,7 +454,7 @@ export const PriceInfo = styled.div<PackedLunchProps>`
     ${({ size }) =>
         size === 'small' &&
         css`
-            h2 {
+            h4 {
                 font-size: 1.5rem;
             }
 
@@ -522,7 +522,7 @@ export const Data = styled.div`
         color: ${({ theme }) => theme.colors.secondary900};
     }
 
-    h6 {
+    p {
         font-weight: 500;
         font-size: 1.25rem;
         text-align: center;

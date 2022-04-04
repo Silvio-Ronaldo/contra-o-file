@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'gatsby';
 import { FiMenu } from 'react-icons/fi';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import { Button } from '../../components/Button';
 
@@ -74,7 +74,7 @@ export function Home() {
                                 alt="logo"
                                 placeholder="blurred"
                                 objectFit="fill"
-                                width={270}
+                                aspectRatio={2}
                             />
                         </div>
                         <nav>
@@ -107,12 +107,12 @@ export function Home() {
 
                 <Main>
                     <h1>Venha matar a sua fome</h1>
-                    <h5>
+                    <h2>
                         Aproveite nossa comida deliciosa e<br />
                         fortaleça todo o seu organismo
                         <br />
                         sem pagar um absurdo.
-                    </h5>
+                    </h2>
                     <span>E de brinde, proteja os animais!</span>
 
                     <Button text="Estou com fome" size="large" />
@@ -129,7 +129,7 @@ export function Home() {
                 />
 
                 <h3>Nossos valores</h3>
-                <h5>Por que escolher o Contra o Filé?</h5>
+                <h4>Por que escolher o Contra o Filé?</h4>
 
                 <AboutCards>
                     <AboutCard>
@@ -138,7 +138,7 @@ export function Home() {
                             alt="Comida saudável"
                             placeholder="blurred"
                         />
-                        <h6>Comida vegana saudável e fresca</h6>
+                        <h5>Comida vegana saudável e fresca</h5>
                         <p>
                             Não importa se você começou ontem no veganismo ou já
                             está no caminho a tempos, temos algo que vai agradar
@@ -152,7 +152,7 @@ export function Home() {
                             alt="Produtores locais"
                             placeholder="blurred"
                         />
-                        <h6>Produtores locais e orgânicos</h6>
+                        <h5>Produtores locais e orgânicos</h5>
                         <p>
                             Trabalhamos com produtos de agricultura familiar e
                             incentivamos a produção de comida local.
@@ -165,9 +165,9 @@ export function Home() {
                             alt="Acessível a todos"
                             placeholder="blurred"
                         />
-                        <h6>
+                        <h5>
                             Acessível a<br /> todos
-                        </h6>
+                        </h5>
                         <p>
                             Comida vegana não precisa ser cara e inacessível, o
                             Contra o Filé tenta democratizar o acesso a esse
@@ -204,6 +204,8 @@ export function Home() {
                     selectedItem={date.getDay()}
                     showArrows={false}
                     showStatus={false}
+                    showThumbs={false}
+                    showIndicators={false}
                 >
                     <div
                         style={{
@@ -212,7 +214,7 @@ export function Home() {
                             alignItems: 'center',
                         }}
                     >
-                        <h5>Domingo</h5>
+                        <h4>Domingo</h4>
                         <MenuCard>
                             <ul>
                                 <li>Arroz com Brocólis e Amêndoas</li>
@@ -232,7 +234,7 @@ export function Home() {
                             alignItems: 'center',
                         }}
                     >
-                        <h5>Segunda-Feira</h5>
+                        <h4>Segunda-Feira</h4>
                         <MenuCard>
                             <ul>
                                 <li>Feijão com Brocólis e Amêndoas</li>
@@ -252,7 +254,7 @@ export function Home() {
                             alignItems: 'center',
                         }}
                     >
-                        <h5>Terça-Feira</h5>
+                        <h4>Terça-Feira</h4>
                         <MenuCard>
                             <ul>
                                 <li>Granola com Brocólis e Amêndoas</li>
@@ -272,7 +274,7 @@ export function Home() {
                             alignItems: 'center',
                         }}
                     >
-                        <h5>Quarta-Feira</h5>
+                        <h4>Quarta-Feira</h4>
                         <MenuCard>
                             <ul>
                                 <li>Granola com Brocólis e Amêndoas</li>
@@ -312,7 +314,7 @@ export function Home() {
                             alignItems: 'center',
                         }}
                     >
-                        <h5>Sexta-Feira</h5>
+                        <h4>Sexta-Feira</h4>
                         <MenuCard>
                             <ul>
                                 <li>Granola com Brocólis e Amêndoas</li>
@@ -332,7 +334,7 @@ export function Home() {
                             alignItems: 'center',
                         }}
                     >
-                        <h5>Sábado</h5>
+                        <h4>Sábado</h4>
                         <MenuCard>
                             <ul>
                                 <li>Granola com Brocólis e Amêndoas</li>
@@ -365,7 +367,7 @@ export function Home() {
                         </PriceImageContainer>
 
                         <PriceInfo>
-                            <h2>Grande</h2>
+                            <h4>Grande</h4>
                             <span>R$ 22,90</span>
                             <p>R$ 18,90</p>
                         </PriceInfo>
@@ -386,7 +388,7 @@ export function Home() {
                             />
                         </PriceImageContainer>
                         <PriceInfo size="medium">
-                            <h2>Média</h2>
+                            <h4>Média</h4>
                             <span>R$ 18,90</span>
                             <p>R$ 17,50</p>
                         </PriceInfo>
@@ -408,7 +410,7 @@ export function Home() {
                             />
                         </PriceImageContainer>
                         <PriceInfo size="small">
-                            <h2>Pequena</h2>
+                            <h4>Pequena</h4>
                             <span>R$ 15,90</span>
                             <p>R$ 15,50</p>
                         </PriceInfo>
@@ -425,16 +427,16 @@ export function Home() {
                     <Data>
                         <div>
                             <h4>Atendemos apenas delivery no momento!</h4>
-                            <h6>
+                            <p>
                                 Horário de funcionamento: 11:00H - 15:00H
                                 <br />
                                 Seg a Sáb.
-                            </h6>
-                            <h6>
+                            </p>
+                            <p>
                                 Localização: Rua Alfredo Lopes 1717
                                 <br /> CEP 13560460
-                            </h6>
-                            <h6>Telefone: (16) 98765-1234 - Whatsapp</h6>
+                            </p>
+                            <p>Telefone: (16) 98765-1234 - Whatsapp</p>
                         </div>
 
                         <Button text="Ir para o nosso WhatsApp" size="large" />

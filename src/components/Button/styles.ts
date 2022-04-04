@@ -49,7 +49,7 @@ export const Container = styled.button<ContainerProps>`
             }
         `}
 
-    background-color: ${({ theme }) => theme.colors.secondary500};
+    background-color: ${({ theme }) => theme.colors.secondary900};
     color: ${({ theme }) => theme.colors.white};
     border: 1px solid ${({ theme }) => theme.colors.black};
 
@@ -63,5 +63,6 @@ export const Container = styled.button<ContainerProps>`
 
     &:hover {
         cursor: pointer;
+        opacity: 0.9;
     }
 `;
