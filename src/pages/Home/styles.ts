@@ -342,10 +342,10 @@ export const Data = styled.div`
 
 export const Map = styled.div`
     width: 540px;
-    height: 570px;
+    height: 480px;
 
-    background-color: green;
     border-radius: 40px;
+    cursor: pointer;
 `;
 
 export const Footer = styled.footer`
