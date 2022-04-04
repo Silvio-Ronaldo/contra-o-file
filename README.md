@@ -65,4 +65,4 @@
 
 
 <h2>⚖️ License</h2>
-<p><strong>Contra o Filé mobile app is BSD Zero Clause licensed, as found in the <a href="./LICENSE">LICENSE file</a>.</strong></p>
+<p><strong>Contra o Filé is BSD Zero Clause licensed, as found in the <a href="./LICENSE">LICENSE file</a>.</strong></p>
