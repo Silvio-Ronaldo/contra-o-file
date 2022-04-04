@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="./LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue" alt="Contra o Filé is released under the MIT license" />
+    <img src="https://img.shields.io/badge/license-BSD-blue" alt="Contra o Filé is released under the BSD Zero Clause license" />
   </a>
   <a href="https://GitHub.com/Silvio-Ronaldo/contra-o-file/graphs/commit-activity">
     <img src="https://img.shields.io/badge/Maintained%3F-yes-brightgreen" alt="Contra o Filé is currently maintained by Silvio Ronaldo" />
@@ -33,15 +33,15 @@
   📋 Table of contents
 </h2>
 <ul>
-  <li><a href="https://github.com/Silvio-Ronaldo/save-pass#%EF%B8%8F-technologies">Technologies</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/save-pass#-author">Author</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/save-pass#%EF%B8%8F-license">License</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/contra-o-file#%EF%B8%8F-technologies">Technologies</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/contra-o-file#-author">Author</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/contra-o-file#%EF%B8%8F-license">License</a></li>
 </ul></br>
 
 
 
 <h2>🛡️ Technologies</h2>
-<p>The main tools used in the development of the Contra o Filé mobile app: </p>
+<p>The main tools used in the development of the Contra o Filé: </p>
 
 <ul>
   <li><a href="https://pt-br.reactjs.org">React</a></li>
@@ -65,4 +65,4 @@
 
 
 <h2>⚖️ License</h2>
-<p><strong>Contra o Filé mobile app is MIT licensed, as found in the <a href="./LICENSE">LICENSE file</a>.</strong></p>
+<p><strong>Contra o Filé mobile app is BSD Zero Clause licensed, as found in the <a href="./LICENSE">LICENSE file</a>.</strong></p>
